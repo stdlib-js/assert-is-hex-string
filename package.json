@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/assert-is-hex-string",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Test whether a string contains only hexadecimal digits.",
   "license": "Apache-2.0",
   "author": {
