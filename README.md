@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-hex-string/tags). For example,
+
+```javascript
 import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.1.1-deno/mod.js';
 ```
 
@@ -76,7 +81,7 @@ var bool = isHexString( '0123456789abcdefABCDEF' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.1.1-deno/mod.js';
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@deno/mod.js';
 
 var out = isHexString( '0123456789abcdefABCDEF' );
 // returns true
