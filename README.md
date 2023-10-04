@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-hex-string/tags). For example,
+
+```javascript
 import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.1.1-esm/index.mjs';
 ```
 
@@ -81,7 +86,7 @@ var bool = isHexString( '0123456789abcdefABCDEF' );
 <body>
 <script type="module">
 
-import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.1.1-esm/index.mjs';
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@esm/index.mjs';
 
 var out = isHexString( '0123456789abcdefABCDEF' );
 // returns true
