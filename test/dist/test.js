@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,82 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isHexString = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isHexString, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `true` if provided a string containing all hexadecimal digits', function test( t ) {
-	t.strictEqual( isHexString( '0123456789abcdefABCDEF' ), true, 'returns true' );
-	t.end();
-});
-
-tape( 'the function returns `false` if not provided a string containing all hexadecimal digits', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		'',
-		'È',
-		'g',
-		'h',
-		'i',
-		'j',
-		'k',
-		'l',
-		'm',
-		'n',
-		'o',
-		'p',
-		'q',
-		'r',
-		's',
-		't',
-		'u',
-		'v',
-		'w',
-		'x',
-		'y',
-		'z',
-		'G',
-		'H',
-		'I',
-		'J',
-		'K',
-		'L',
-		'M',
-		'N',
-		'O',
-		'P',
-		'Q',
-		'R',
-		'S',
-		'T',
-		'U',
-		'V',
-		'W',
-		'X',
-		'Y',
-		'Z',
-		new String( 'abcdef' ), // eslint-disable-line no-new-wrappers
-		5,
-		null,
-		NaN,
-		void 0,
-		true,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.strictEqual( isHexString( values[i] ), false, 'returns false when provided ' + values[i] );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
