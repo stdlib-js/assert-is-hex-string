@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@deno/mod.js';
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.2.2-deno/mod.js';
 ```
 
 #### isHexString( value )
@@ -76,7 +76,7 @@ var bool = isHexString( '0123456789abcdefABCDEF' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@deno/mod.js';
+import isHexString from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-hex-string@v0.2.2-deno/mod.js';
 
 var out = isHexString( '0123456789abcdefABCDEF' );
 // returns true
