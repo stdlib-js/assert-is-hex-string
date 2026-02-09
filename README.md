@@ -35,19 +35,90 @@ limitations under the License.
 
 > Test whether a string contains only hexadecimal digits.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/assert-is-hex-string
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
 
+</section>
 
+<section class="usage">
 
+## Usage
+
+```javascript
+var isHexString = require( '@stdlib/assert-is-hex-string' );
+```
+
+#### isHexString( value )
+
+Tests whether a string contains only hexadecimal digits.
+
+```javascript
+var bool = isHexString( '0123456789abcdefABCDEF' );
+// returns true
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   For non-string values, the function returns `false`.
+-   The function does **not** recognize `x` (as in the standard `0x` prefix).
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var isHexString = require( '@stdlib/assert-is-hex-string' );
+
+var out = isHexString( '0123456789abcdefABCDEF' );
+// returns true
+
+out = isHexString( '' );
+// returns false
+
+out = isHexString( '0xffffff' );
+// returns false
+
+out = isHexString( 123 );
+// returns false
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -65,7 +136,7 @@ npm install -g @stdlib/assert-is-hex-string-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: is-hex-string [options] [<string>]
@@ -85,7 +156,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -104,7 +175,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ is-hex-string 0123456789abcdefABCDEF
@@ -138,9 +209,10 @@ false
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/assert-is-hex-string`][@stdlib/assert-is-hex-string]</span><span class="delimiter">: </span><span class="description">test whether a string contains only hexadecimal digits.</span>
 -   <span class="package-name">[`@stdlib/assert-is-string`][@stdlib/assert/is-string]</span><span class="delimiter">: </span><span class="description">test if a value is a string.</span>
 
 </section>
@@ -160,7 +232,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -183,11 +255,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-hex-string-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-is-hex-string-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-hex-string.svg
+[npm-url]: https://npmjs.org/package/@stdlib/assert-is-hex-string
 
-[test-image]: https://github.com/stdlib-js/assert-is-hex-string/actions/workflows/test.yml/badge.svg?branch=v0.2.3
-[test-url]: https://github.com/stdlib-js/assert-is-hex-string/actions/workflows/test.yml?query=branch:v0.2.3
+[test-image]: https://github.com/stdlib-js/assert-is-hex-string/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/assert-is-hex-string/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-hex-string/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/assert-is-hex-string?branch=main
